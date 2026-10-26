@@ -19,27 +19,29 @@ return 0;
 }
 
 
-
-
-
-
-
 Произвел проверку и выявил ошибку неправильного сложения цифр
 Исправленный вариант кода
 
 
+#include <iostream>
+using namespace std;
 
-int name () {
- long long 
+int main() {
+    long long a, b;
+    cin>>a>>b;
 
+    if (a > b) {
+        long long temp = a;
+        a = b;
+        b = temp;
+    }
+    long long count = b - a + 1;
+    long long s = (a + b) * count / 2;
 
-
-
-
-
-
-
+    cout << "sum=" << s << endl;
+    return 0;
 }
+
 
 
 
