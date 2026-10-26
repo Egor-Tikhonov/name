@@ -24,24 +24,30 @@ return 0;
 
 
 #include <iostream>
-using namespace std;
+#include <limits>
 
 int main() {
-    long long a, b;
-    cin>>a>>b;
+    long long from, to;
 
-    if (a > b) {
-        long long temp = a;
-        a = b;
-        b = temp;
+    std::cout << "Enter range [from, to]: ";
+    if (!(std::cin >> from >> to)) {
+        std::cerr << "Error: invalid input.\n";
+        return 1;
     }
-    long long count = b - a + 1;
-    long long s = (a + b) * count / 2;
 
-    cout << "sum=" << s << endl;
+    long long sum = 0;
+    if (from <= to) {
+        for (long long i = from; i <= to; ++i) {
+            sum += i;
+        }
+    } else {
+        std::cout << "Sum: 0 (range is empty)\n";
+        return 0;
+    }
+
+    std::cout << "Sum: " << sum << '\n';
     return 0;
 }
-
 
 
 
