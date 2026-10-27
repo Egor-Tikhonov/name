@@ -9,6 +9,31 @@ using namespace std;
 int main() {
     int ball;
     cin >> ball;
+    if (ball >= 90) cout << "A" << endl;
+    if (ball >= 80 && ball < 90) cout << "B" << endl;
+    if (ball >= 70 && ball < 80) cout << "C" << endl;
+    if (ball >= 60 && ball < 70) cout << "D" << endl;
+    if (ball < 60) cout << "F" << endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int ball;
+    cin >> ball;
     if (ball >= 90) {cout << "A" << endl;
     
 }   else if (ball >= 80 && ball < 90) {cout << "B" << endl;
