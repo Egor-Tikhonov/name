@@ -21,6 +21,7 @@ int main() {
 
 
 
+Добавили функцию ввода чисел 
 
 #include <iostream>
 using namespace std;
